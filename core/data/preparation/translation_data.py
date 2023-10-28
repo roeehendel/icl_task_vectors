@@ -10,7 +10,6 @@ import requests
 
 import nltk
 from nltk.corpus import wordnet as wn
-from unidecode import unidecode
 
 
 def prepare_translation_data():
@@ -59,10 +58,6 @@ def prepare_translation_data():
         wn_language = lang_to_wn_lang[language]
         mapping = {k: v for k, v in mapping.items() if len(wn.synsets(v, lang=wn_language)) > 0}
         inverse_mapping = {k: v for k, v in inverse_mapping.items() if len(wn.synsets(v, lang=wn_base_language)) > 0}
-
-        # remove accents
-        # mapping = {k: unidecode(v) for k, v in mapping.items()}
-        # inverse_mapping = {k: unidecode(v) for k, v in inverse_mapping.items()}
 
         with open(output_file_path_template.format(mapping_name=f"{BASE_LANGUAGE}_{language}"), "w") as f:
             json.dump(mapping, f, indent=4)
