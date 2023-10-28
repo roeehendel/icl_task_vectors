@@ -1,0 +1,32 @@
+--index-url https://download.pytorch.org/whl/cu118
+--extra-index-url https://pypi.org/simple
+
+# Python
+requests
+tqdm
+python-dotenv
+
+# Data Science
+scipy
+scikit-learn
+matplotlib
+pandas
+jupyter
+
+# Pytorch
+torch
+
+# NLP
+transformers
+datasets
+accelerate
+
+# Misc
+schedule
+
+sentencepiece
+bitsandbytes
+nltk
+# translate
+# fschat
+

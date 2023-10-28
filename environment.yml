@@ -8,7 +8,6 @@ dependencies:
   - python=3.10
 
   # Python
-  - pytest
   - requests
   - tqdm
   - python-dotenv
@@ -17,13 +16,12 @@ dependencies:
   - scipy
   - scikit-learn
   - matplotlib
-  - plotly
   - pandas
   - jupyter
 
   # Pytorch
-  - pytorch 
-  - pytorch-cuda=11.7
+  - pytorch
+  - pytorch-cuda=11.8
 
   # NLP
   - transformers

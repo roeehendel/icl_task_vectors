@@ -28,10 +28,9 @@ def run_icl(
     test_datasets: List[FewShotDataset],
     include_train: bool = True,
 ) -> List[str]:
-    max_new_tokens = _get_max_new_tokens(tokenizer, test_datasets)
     format_dataset_kwargs = {"include_train": include_train}
     inputs = tokenize_datasets(tokenizer, test_datasets, format_dataset_kwargs=format_dataset_kwargs)
-    new_ids = batch_generate(model, tokenizer, inputs=inputs, generate_kwargs={"max_new_tokens": max_new_tokens})
+    new_ids = batch_generate(model, tokenizer, inputs=inputs, generate_kwargs={"max_new_tokens": 1})
     predictions = decode_predictions(new_ids, tokenizer)
 
     return predictions
