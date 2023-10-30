@@ -1,6 +1,8 @@
 # In-Context Learning Creates Task Vectors
 This is the official code repository for the paper [In-Context Learning Creates Task Vectors](https://arxiv.org/abs/2310.15916), Roee Hendel, Mor Geva, Amir Globerson. 2023.
 
+**Note** - For correspondence, use the email address: roeehendel@mail.tau.ac.il
+
 <img src="images/mechanism.png" width="400"/>
 
 ## Environment Setup
